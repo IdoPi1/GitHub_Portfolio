@@ -1,1 +1,157 @@
-<h1>My Portfolio</h1>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עידו דוד | פורטפוליו הנדסי</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section { margin-bottom: 3rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        
+        h2 { border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; color: var(--primary-color); }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item { background: #e8eff5; padding: 0.8rem; border-radius: 4px; text-align: center; font-weight: bold; }
+
+        .project-card {
+            border-right: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background: #fafafa;
+        }
+
+        .project-card h3 { margin-top: 0; color: var(--accent-color); }
+
+        .tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            font-size: 0.8rem;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+
+        footer { text-align: center; padding: 2rem; color: #777; font-size: 0.9rem; }
+        
+        .contact-btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>עידו דוד</h1>
+    <p>מהנדס מכונות (B.Sc) | סטודנט לתואר שני (M.Sc) ברובוטיקה ובקרה</p>
+</header>
+
+<div class="container">
+
+    <section id="about">
+        <h2>עליי</h2>
+        <p>
+            מהנדס מכונות עם התמחות במערכות אלקטרו-מכניות ואופטו-מכניות. 
+            בעל ניסיון מעשי באינטגרציה של מערכות מורכבות בסביבת חדר נקי, תכנון חומרה (PCB), 
+            ופיתוח אלגוריתמי בקרה למערכות רובוטיות. משלב בין יכולות Hands-on של בנייה וייצור לבין תכנות מערכות משובצות מחשב (Embedded).
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>כישורים טכניים</h2>
+        <div class="skills-grid">
+            <div class="skill-item">בקרים: ESP32 / ESP32-C6</div>
+            <div class="skill-item">שפות: C / C++ / Python</div>
+            <div class="skill-item">בקרה: PID / Kalman Filter</div>
+            <div class="skill-item">חומרה: תכנון PCB / הלחמות</div>
+            <div class="skill-item">ייצור: הדפסה בתלת-ממד</div>
+            <div class="skill-item">תוכנה: SolidWorks / MATLAB</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>פרויקטים נבחרים</h2>
+
+        <div class="project-card">
+            <h3>רובוט הולך (Robot Dog) - ייצוב אקטיבי</h3>
+            <span class="tag">Embedded C++</span> <span class="tag">IMU MPU6050</span> <span class="tag">Robotics</span>
+            <p>פיתוח רובוט בעל ארבע רגליים הכולל מערכת איזון עצמי (Self-Leveling). הפרויקט כלל מימוש לוגיקת תנועה מורכבת וייצוב אקטיבי מבוסס חיישן תאוצה וג'ירוסקופ.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>חיישן מהירות סיבובי מותאם אישית</h3>
+            <span class="tag">PCB Design</span> <span class="tag">ESP32</span> <span class="tag">3D Printing</span>
+            <p>תכנון וייצור מעגל מודפס (PCB) עבור חיישן IR למדידת מהירות סיבוב, הכולל תצוגת OLED ומארז בעיצוב אישי בהדפסת תלת-ממד.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>מחקר: בקרה אקטיבית על הטיה צידית</h3>
+            <span class="tag">Control Theory</span> <span class="tag">M.Sc Research</span>
+            <p>חקר ומימוש בקרת P לניהול הטיות רוחביות ועמידות בפני הפרעות דינמיות כחלק מהתואר השני.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>השכלה</h2>
+        <p><strong>2026 - היום:</strong> תואר שני (M.Sc) בהנדסת מכונות, התמחות ברובוטיקה ובקרה.</p>
+        <p><strong>2022 - 2026:</strong> תואר ראשון (B.Sc) בהנדסת מכונות, SCE.</p>
+        <p><strong>דיפלומה:</strong> הנדסאי מכטרוניקה, אורט רחובות.</p>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <h2>צור קשר</h2>
+        <p>מעוניינים לשמוע עוד על הפרויקטים שלי או לדון בהזדמנויות מקצועיות?</p>
+        <a href="mailto:your-email@example.com" class="contact-btn">שלח מייל</a>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 עידו דוד | נבנה באמצעות GitHub Pages</p>
+</footer>
+
+</body>
+</html>
